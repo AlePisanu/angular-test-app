@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="card--img-container">
+      <img class="card--img-top" [attr.src]="img" alt="Card image cap">
+    </div>
+    <p [innerHTML]="tabCurrentTitle" class="card--title"></p>
+    <p [innerHTML]="tabCurrentText" class="card--text"></p>
+    <div class="card--icon-wrapper">
+      <div class="card--icon" *ngFor="let item of itemList" [ngClass]="{'active': item.tab === tabCurrent}" (mouseenter)="changeCardTab(item.tab)">
+        <fa-icon [icon]="item.icon"></fa-icon>
+      </div>
+    </div>
+</div>

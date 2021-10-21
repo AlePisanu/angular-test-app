@@ -1,11 +1,21 @@
+import { CardComponent } from './tab-item/card.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedComponent } from './shared.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+const components = [
+  CardComponent
+];
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FontAwesomeModule
   ],
-  declarations: [SharedComponent]
+  declarations: [
+    ...components
+  ],
+  exports: [
+    ...components
+  ]
 })
 export class SharedModule { }

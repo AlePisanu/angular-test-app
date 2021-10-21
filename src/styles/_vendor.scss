@@ -1,0 +1,11 @@
+@import "~bootstrap-scss/functions";
+@import '~bootstrap-scss/variables';
+@import '~bootstrap-scss/mixins';
+@import '~bootstrap-scss/mixins/_breakpoints';
+@import '~bootstrap-scss/reboot';
+@import "~bootstrap-scss/grid";
+@import "~bootstrap-scss/card";
+
+* {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
