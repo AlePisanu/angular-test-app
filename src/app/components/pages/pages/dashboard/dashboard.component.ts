@@ -16,6 +16,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   public userInfo: ResultUserInfo;
   public itemList: ItemList[];
   public img: string;
+  public loaded = false;
   private readonly onDestroy$ = new Subject<void>();
 
   constructor(
@@ -27,6 +28,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
       takeUntil(this.onDestroy$),
       filter((user) => Boolean(user))
     ).subscribe((response) => {
+      this.loaded = true;
       this.userInfo = response[0];
       this.img = this.userInfo.picture.large
       this.itemList = mapUserInfoView(this.userInfo);

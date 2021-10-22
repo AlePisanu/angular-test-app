@@ -8,7 +8,7 @@ export function mapUserInfoView(userInfo: ResultUserInfo): ItemList[] {
     const itemList: ItemList[] = [
         {
             title: 'Hi, My name is',
-            value: userInfo.name.title,
+            value: `${userInfo.name.title} ${userInfo.name.first} ${userInfo.name.last}`,
             icon: faUser,
             tab: TabListEnum.NAME
         },
@@ -26,7 +26,7 @@ export function mapUserInfoView(userInfo: ResultUserInfo): ItemList[] {
         },
         {
             title: 'My address is',
-            value: userInfo.location.street.name,
+            value: `${userInfo.location.street.number} ${userInfo.location.street.name}`,
             icon: faMap,
             tab: TabListEnum.ADDRESS
         },

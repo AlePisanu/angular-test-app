@@ -1,3 +1,3 @@
 <div class="container">
-    <app-card [itemList]="itemList" [img]="img"></app-card>
+    <app-card *ngIf="loaded" [itemList]="itemList" [img]="img"></app-card>
 </div>
