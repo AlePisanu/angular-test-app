@@ -2,6 +2,7 @@ import { ItemList } from './../interfaces/tab-list-icon';
 import { TabListEnum } from './../enums/tab-list.enum';
 import { ResultUserInfo } from './../interfaces/user-info-response';
 import { faCalendar, faEnvelope, faLock, faMap, faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
+import { parseISOtoString } from './functions';
 
 export function mapUserInfoView(userInfo: ResultUserInfo): ItemList[] {
     const itemList: ItemList[] = [
@@ -19,7 +20,7 @@ export function mapUserInfoView(userInfo: ResultUserInfo): ItemList[] {
         },
         {
             title: 'My birthday is',
-            value: 'userInfo.dob.date.toLocaleString()',
+            value: parseISOtoString(userInfo.dob.date),
             icon: faCalendar,
             tab: TabListEnum.BIRTH
         },

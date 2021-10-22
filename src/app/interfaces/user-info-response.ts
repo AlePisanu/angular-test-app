@@ -45,7 +45,7 @@ export interface LoginUserInfo {
 }
 
 export interface DobUserInfo {
-    date: Date | string;
+    date: Date;
     age: number;
 }
 
